@@ -12,7 +12,7 @@
     ]; 
     
     // Archivos marcados para borrar - files to delete
-    const arhivos = fs.map( f => f.f );
+    const arhivos = filesToEvaluate.map( f => f.f );
 
     
     class AbstractUser { };

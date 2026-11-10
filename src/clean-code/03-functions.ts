@@ -1,39 +1,41 @@
 (() => {
 
-    // función para obtener información de una película por Id
-    function getAllMovies( movieId: string ) {
-        console.log({ movieId });
-    }
-
-    // función para obtener información de los actores de una película - Actors o Cast // id = movieId getMovieCast
-    function getAllMovieActors( id: string ) {
+    // Función para obtener información de una película por Id
+    function getMovieById( id: string ) {
         console.log({ id });
     }
 
-    // funcion para obtener el bio del actor por el id
-    function getUsuario( ActorId: string ) {
-        console.log({ ActorId });
+    // Función para obtener el elenco de una película por Id
+    function getMovieCastById( movieId: string ) {
+        console.log({ movieId });
+    }
+
+    // Función para obtener la biografía de un actor por Id
+    function getActorBioById( actorId: string ) {
+        console.log({ actorId });
     }
     
-    // Crear una película
-    function movie(title: string, description: string, rating: number, cast: string[] ) {
+    // Crear una película (agrupando más de 3 parámetros en un objeto)
+    interface MovieOptions {
+        cast: string[];
+        description: string;
+        rating: number;
+        title: string;
+    }
+
+    function createMovie({ title, description, rating, cast }: MovieOptions) {
         console.log({ title, description, rating, cast });
     }
 
-    // Crea un nuevo actor
-    function createActorIfActorNotExists( fullName: string, birthdate: Date ): boolean {
+    // Crea un nuevo actor (nombre simple sin condicionales)
+    function createActor( fullName: string, birthdate: Date ): boolean {
         
-        // tarea asincrona para verificar nombre
-        // ..
-        // ..
+        // Tarea asíncrona para verificar si ya existe
         if ( fullName === 'fernando' ) return false;
 
         console.log('Crear actor');
         return true;        
 
     }
-
-    
-
 
 })();

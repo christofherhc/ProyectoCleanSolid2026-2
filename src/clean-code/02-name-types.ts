@@ -1,16 +1,16 @@
 (() => {
 
     // arreglo de temperaturas celsius
-    const arrayOfNums = [33.6, 12.34];
+    const TemperaturaCelsius = [33.6, 12.34];
 
     // Dirección ip del servidor
-    const ip = '123.123.123.123';
+    const IpServidor = '123.123.123.123';
 
     // Listado de usuarios
-    const people = [{id: 1, email: 'fernando@google.com'},{ id: 2, email: 'juan@google.com' }, { id: 3, email: 'melissa@google.com' }];
+    const Usuarios = [{id: 1, email: 'fernando@google.com'},{ id: 2, email: 'juan@google.com' }, { id: 3, email: 'melissa@google.com' }];
 
     // Listado de emails de los usuarios
-    const emails = people.map( u => u.email );
+    const EmailsUsuarios = Usuarios.map( u => u.email );
 
     // Variables booleanas de un video juego
     const jump = false;

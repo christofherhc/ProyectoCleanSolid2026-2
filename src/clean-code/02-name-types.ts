@@ -19,33 +19,35 @@
     const isLoading = false;
 
     // Otros ejercicios
-    // tiempo inicial
-    const start = new Date().getTime();
-    //....
+    // Tiempo inicial
+    const startTime = new Date().getTime();
+
+    // ...
     // 3 doritos después
-    //...
-    // Tiempo al final
-    const end = new Date().getTime() - start;
+    // ...
+
+    // Tiempo transcurrido
+    const elapsedTime = new Date().getTime() - startTime;
 
 
     // Funciones
     // Obtiene los libros
-    function book() {
+    function getBooks() {
         throw new Error('Function not implemented.');
     }
 
-    // obtiene libros desde un URL
-    function BooksUrl( u: string) {
-        throw new Error('Function not implemented.');
-    }
-    
-    // obtiene el área de un cuadrado basado en sus lados
-    function areaCuadrado( s: number ) {
+    // Obtiene libros desde una URL
+    function getBooksByUrl(url: string) {
         throw new Error('Function not implemented.');
     }
 
-    // imprime el trabajo
-    function printJobIfJobIsActive() {
+    // Obtiene el área de un cuadrado basado en sus lados
+    function getSquareArea(side: number) {
+        throw new Error('Function not implemented.');
+    }
+
+    // Imprime el trabajo
+    function printJob() {
         throw new Error('Function not implemented.');
     }
     

@@ -44,10 +44,21 @@
         }
     }
 
+    class ProductService {
+        getProduct(id: number): Product {
+            console.log('Obteniendo producto con id:', id);
+            return { id, name: 'OLED Tv' };
+        }
+
+        saveProduct(product: Product): void {
+            console.log('Guardando en base de datos', product);
+        }
+    }
 
     const productBloc = new ProductBloc();
     const cartBloc = new CartBloc();
     const mailerService = new MailerService();
+    const productService = new ProductService();
 
     productBloc.loadProduct(10);
     productBloc.saveProduct({ id: 10, name: 'OLED TV' });

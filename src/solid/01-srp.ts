@@ -38,15 +38,21 @@
         }
     }
     
+    class MailerService {
+        notifyClients(product: Product): void {
+            console.log('Enviando correo a los clientes por:', product.name);
+        }
+    }
 
 
     const productBloc = new ProductBloc();
     const cartBloc = new CartBloc();
+    const mailerService = new MailerService();
 
     productBloc.loadProduct(10);
     productBloc.saveProduct({ id: 10, name: 'OLED TV' });
-    productBloc.notifyClients();
-    productBloc.onAddToCart(10);
+    mailerService.notifyClients({ id: 10, name: 'OLED TV' });
+    cartBloc.onAddToCart(10);
 
 
 
